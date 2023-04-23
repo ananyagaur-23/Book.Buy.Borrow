@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page</title>
+    <style>
+      body {
+        background-color: rgba(0, 128, 0, 0.5);
+      }
+      #login-container {
+        background-color: #005500;
+        border: 2px solid white;
+        border-radius: 10px;
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        color: white;
+        text-align: center;
+      }
+      #username,
+      #password {
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        margin: 10px 0;
+        width: 100%;
+      }
+      #submit-btn {
+        background-color: lightgreen;
+        border: none;
+        color: #005500;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #submit-btn:hover {
+        background-color: white;
+      }
+      #forgot-password {
+        color: white;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login-container">
+      <h1>Book.Buy.Borrow</h1>
+      <form onsubmit="return redirectToHomePage()">
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button type="submit" id="submit-btn">Login</button>
+      </form>
+      <a href="#" id="forgot-password">Forgot Password?</a>
+    </div>
+    <script>
+      function redirectToHomePage() {
+        window.location.href = "home.html";
+        return false;
+      }
+    </script>
+  </body>
+</html>
